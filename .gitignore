@@ -1,0 +1,79 @@
+# ----------------------------
+# AMBIENTE VIRTUAL
+# ----------------------------
+.venv/
+venv/
+ENV/
+env/
+
+# ----------------------------
+# PYTHON CACHE
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ----------------------------
+# NOTEBOOKS
+# ----------------------------
+.ipynb_checkpoints/
+
+# ----------------------------
+# DADOS DO PROJETO
+# (não subir dados brutos ou processados)
+# ----------------------------
+data/
+*.csv
+*.parquet
+*.xlsx
+
+# ----------------------------
+# MODELOS, PIPELINES E ARTIFACTS
+# ----------------------------
+*.pkl
+*.pickle
+*.joblib
+
+# ----------------------------
+# STREAMLIT
+# ----------------------------
+.streamlit/
+
+# ----------------------------
+# LOGS E ARQUIVOS TEMPORÁRIOS
+# ----------------------------
+*.log
+*.tmp
+*.temp
+
+# ----------------------------
+# VS CODE
+# ----------------------------
+.vscode/
+*.code-workspace
+
+# ----------------------------
+# SISTEMA OPERACIONAL
+# ----------------------------
+*.DS_Store
+Thumbs.db
+
+# ----------------------------
+# BUILD / DIST
+# ----------------------------
+build/
+dist/
+*.egg-info/
+
+# ----------------------------
+# TESTES
+# (manter tests/, mas ignorar caches)
+# ----------------------------
+.pytest_cache/
+
+# ----------------------------
+# CONFIGURAÇÕES LOCAIS
+# ----------------------------
+.env
+*.env
