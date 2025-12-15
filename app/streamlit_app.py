@@ -57,7 +57,7 @@ def carregar_modelos():
 
 @st.cache_data
 def carregar_df():
-    return pd.read_parquet(DATA_DIR / "df_com_cluster_id.parquet")
+    return pd.read_parquet(DATA_DIR / "data/processed/df_cluster_id.parquet")
 
 
 preprocess_pred, best_model, scaler_cluster, kmeans_cluster = carregar_modelos()
