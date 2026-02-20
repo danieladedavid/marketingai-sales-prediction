@@ -194,7 +194,7 @@ Principais bibliotecas (listadas em `requirements.txt`):
 Clone o repositório:
 
 ```
-git clone https://github.com/SEU-USUARIO/marketingai-sales-prediction.git
+git clone https://github.com/danieladedavid/marketingai-sales-prediction.git
 cd marketingai-sales-prediction
 ```
 
@@ -356,6 +356,9 @@ no arquivo `runtime.txt` e nas configurações avançadas da plataforma.
 
 O deploy é realizado automaticamente a partir do repositório GitHub.
 
+Abaixo segue o preview do app:
+![Preview do app](assets/preview_app.png)
+
 
 6. Confirme o uso do `requirements.txt`
 
@@ -421,3 +424,7 @@ Os termos completos estão no arquivo `LICENSE`.
 - À comunidade open source (pandas, scikit-learn, streamlit etc.), cujas bibliotecas e ferramentas tornaram este trabalho possível.
 
 
+
+
+[def]: assets/preview_app.png
+[def2]: assets/preview_app.png
