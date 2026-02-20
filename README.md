@@ -328,6 +328,32 @@ O modelo final selecionado foi:
 - baixo risco de overfitting  
 - simplicidade operacional  
 
+## Resultados do modelo (validação)
+
+Avaliação no conjunto de validação com divisão temporal (último mês), comparando modelos por **RMSE**, **MAE** e **R²**.
+
+| Modelo | RMSE | MAE | R² |
+|---|---:|---:|---:|
+| Ridge (baseline) | 43.56 | 16.81 | 0.736 |
+| RandomForest | 44.82 | 17.38 | 0.721 |
+| LightGBM | 49.69 | 18.24 | 0.657 |
+| XGBoost | 50.05 | 18.42 | 0.652 |
+
+### Por que o Ridge foi o melhor neste cenário
+Apesar de modelos baseados em árvores (Random Forest, LightGBM e XGBoost) muitas vezes apresentarem desempenho superior, neste conjunto de dados o **Ridge (modelo linear regularizado)** foi mais adequado.
+
+Principais razões:
+1. **Features numéricas e altamente informativas**  
+   Variáveis como médias históricas por loja/item e `cluster_id` tendem a produzir uma relação aproximadamente linear com as vendas.
+
+2. **Regularização do Ridge**  
+   Ajuda a estabilizar o ajuste em um espaço de atributos denso e reduz risco de overfitting.
+
+3. **Setup e capacidade de modelagem**  
+   Dependendo da configuração/hiperparâmetros e do tipo de feature engineering adotado, modelos de árvore podem não capturar ganhos adicionais suficientes para superar o Ridge neste cenário.
+
+**Resumo:** para este dataset e configuração, o **Ridge** entregou o melhor desempenho preditivo com maior simplicidade e boa interpretabilidade.
+
 ### 7.5 Deploy
 
 O modelo final é utilizado via aplicação Streamlit, permitindo interação com os dados e previsão instantânea.
